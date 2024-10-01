@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Empowering the Nation</title>
+</head>
+<body>
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowered<br>To Empower</h1>
+    </div>
+    <div class="image-slider">
+      <img src="image1.jpg" alt="Course Image 1" class="slider-image">
+      <img src="image2.jpg" alt="Course Image 2" class="slider-image">
+      <img src="image3.jpg" alt="Course Image 3" class="slider-image">
+    </div>
+  </section>
+
+  <section class="courses-section" id="courses">
+    <div class="quote">
+      "Enhance your skills and build a better future."
+    </div>
+    <div class="courses-buttons">
+      <a href="6-month-course.html" class="button-primary">6 Month Course</a>
+      <a href="6-week-course.html" class="button-secondary">6 Week Course</a>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    document.getElementById('nav-placeholder').innerHTML = `
+      <!-- Navigation -->
+      <header>
+        <div class="logo">
+          <img src="logo.svg" alt="Empowering the Nation Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="checkout.html">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
+    `;
+    document.getElementById('footer-placeholder').innerHTML = `
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-links">
+            <p>Since 2018</p>
+            <p>Contact Us:<br>info@etn.co.za<br>+27 12 345 6789</p>
+            <p>Find Us:<br>Venue 1: Address<br>Venue 2: Address<br>Venue 3: Address</p>
+          </div>
+        </div>
+      </footer>
+    `;
+  </script>
+</body>
+</html>

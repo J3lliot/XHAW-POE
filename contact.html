@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+    
+    <div class="contact-page">
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-image">
+                <img src="Images/contact.webp" alt="Contact Us">
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Contact Us</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      document.getElementById('nav-placeholder').innerHTML = `
+        <!-- Navigation -->
+        <header>
+          <div class="logo">
+            <img src="logo.svg" alt="Empowering the Nation Logo">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="checkout.html">Cart</a></li>
+            </ul>
+          </nav>
+        </header>
+      `;
+      document.getElementById('footer-placeholder').innerHTML = `
+        <!-- Footer -->
+        <footer>
+          <div class="footer-content">
+            <div class="footer-links">
+              <p>Since 2018</p>
+              <p>Contact Us:<br>info@etn.co.za<br>+27 12 345 6789</p>
+              <p>Find Us:<br>Venue 1: Address<br>Venue 2: Address<br>Venue 3: Address</p>
+            </div>
+          </div>
+        </footer>
+      `;
+    </script>
+</body>
+</html>

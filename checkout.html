@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Checkout Page Content -->
+    <div class="checkout-page">
+        <!-- Courses in Cart -->
+        <div class="cart-details">
+            <h2>Courses in Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Price (R)</th>
+                    </tr>
+                </thead>
+                <tbody id="items">
+                    <!-- Cart items will be populated here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total Price:</td>
+                        <td id="total-price">R0.00</td>
+                    </tr>
+                    <tr>
+                        <td>VAT (15%):</td>
+                        <td id="vat-amount">R0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Final Amount:</td>
+                        <td id="final-amount">R0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- EFT Payment Option -->
+        <div class="eft-details">
+            <h2>Pay via EFT</h2>
+            <p>Bank Name: Bank</p>
+            <p>Account Number: 123456789</p>
+            <p>Branch Code: 987654</p>
+            <p>Reference: Your Name / Organization</p>
+            <p>Please email proof of payment to: info@etn.co.za</p>
+        </div>
+
+        <!-- Online Payment Option -->
+        <div class="online-payment">
+            <h2>Pay Online</h2>
+            <form class="online-form" action="#" method="POST">
+                <label for="amount">Final Amount:</label>
+                <input type="text" id="payment-amount" name="amount" readonly>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Visa</option>
+                    <option value="paypal">Mastercard</option>
+                    <option value="other">Other Payment Options</option>
+                </select>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Populate Navigation Bar
+        document.getElementById('nav-placeholder').innerHTML = `
+            <!-- Navigation -->
+            <header>
+                <div class="logo">
+                    <img src="logo.svg" alt="Empowering the Nation Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="checkout.html">Cart</a></li>
+                    </ul>
+                </nav>
+            </header>
+        `;
+
+        // Populate Footer
+        document.getElementById('footer-placeholder').innerHTML = `
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <p>Since 2018</p>
+                        <p>Contact Us:<br>info@etn.co.za<br>+27 12 345 6789</p>
+                        <p>Find Us:<br>Venue 1: Address<br>Venue 2: Address<br>Venue 3: Address</p>
+                    </div>
+                </div>
+            </footer>
+        `;
+
+        // Cart Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const VAT_RATE = 0.15;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Function to calculate total price and VAT
+            function calculateTotal() {
+                let totalAmount = 0;
+                cart.forEach(item => totalAmount += item.price);
+                const vatAmount = totalAmount * VAT_RATE;
+                const finalAmount = totalAmount + vatAmount;
+                return { totalAmount, vatAmount, finalAmount };
+            }
+
+            // Function to update cart display
+            function updateCartDisplay() {
+                const cartItemsContainer = document.getElementById('items');
+                cartItemsContainer.innerHTML = ''; // Clear current items
+
+                let { totalAmount, vatAmount, finalAmount } = calculateTotal();
+
+                // Populate cart items
+                cart.forEach(item => {
+                    const itemElement = document.createElement('tr');
+                    itemElement.innerHTML = `
+                        <td>${item.course}</td>
+                        <td>R${item.price.toFixed(2)}</td>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+
+                // Update totals
+                document.getElementById('total-price').textContent = `R${totalAmount.toFixed(2)}`;
+                document.getElementById('vat-amount').textContent = `R${vatAmount.toFixed(2)}`;
+                document.getElementById('final-amount').textContent = `R${finalAmount.toFixed(2)}`;
+
+                // Populate final amount in payment form
+                document.getElementById('payment-amount').value = `R${finalAmount.toFixed(2)}`;
+            }
+
+            // Update the cart display when page loads
+            updateCartDisplay();
+        });
+    </script>
+</body>
+</html>
+    

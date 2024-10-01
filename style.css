@@ -1,0 +1,903 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  max-height: 50px;
+}
+
+nav {
+  background: #333;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem; /* Increased padding for better spacing */
+  border-bottom: 4px solid #fff; /* Adjust border for separation */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Larger font size for prominence */
+}
+
+/* Courses Section */
+.courses-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.quote {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.courses-buttons {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px; /* Added border radius for rounded corners */
+}
+
+.button-primary {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.button-secondary {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+/* Image Slider */
+.image-slider {
+  flex: 3;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Set a height for the slider */
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Course Tables */
+.course-table {
+  width: 100%;
+  max-width: 800px; /* Adjusted for better centering */
+  margin: 2rem auto; /* Centered with auto margin */
+  border-collapse: collapse;
+  text-align: center; /* Centered text inside table cells */
+}
+
+.course-table h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.course-table th, .course-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.course-table td a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #333;
+  color: #333;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.course-table td a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Footer Styles */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 150px; /* Adjust logo size */
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem; /* Reduced margin for better spacing */
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Courses Page Specific Styles */
+.courses-page {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-column {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.course-column h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.course-button {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid #333;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.course-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Specific Styles for 6 Month and 6 Week Courses Pages */
+.course-page {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.course-page .course-table {
+  margin: 2rem auto; /* Center the table horizontally */
+  max-width: 1200px; /* Ensure the table does not exceed a maximum width */
+}
+
+.course-page .course-column {
+  text-align: center;
+}
+
+/* Additions for Course Pages */
+.course-details {
+  max-width: 800px;
+  margin: 2rem auto; /* Centered with auto margin */
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+.course-details h2 {
+  font-size: 24px;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 15px;
+}
+
+.course-details h3 {
+  font-size: 20px;
+  color: #555; /* Slightly lighter text for subheadings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.course-details p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666; /* Light text for general content */
+}
+
+.course-details ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.course-details ul li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  max-height: 50px;
+}
+
+nav {
+  background: #333;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem; /* Increased padding for better spacing */
+  border-bottom: 4px solid #fff; /* Adjust border for separation */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Larger font size for prominence */
+}
+
+/* Courses Section */
+.courses-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.quote {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.courses-buttons {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px; /* Added border radius for rounded corners */
+}
+
+.button-primary {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.button-secondary {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+/* Image Slider */
+.image-slider {
+  flex: 3;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Set a height for the slider */
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Course Tables */
+.course-table {
+  width: 100%;
+  max-width: 800px; /* Adjusted for better centering */
+  margin: 2rem auto; /* Centered with auto margin */
+  border-collapse: collapse;
+  text-align: center; /* Centered text inside table cells */
+}
+
+.course-table h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.course-table th, .course-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.course-table td a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #333;
+  color: #333;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.course-table td a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Footer Styles */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 150px; /* Adjust logo size */
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem; /* Reduced margin for better spacing */
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Courses Page Specific Styles */
+.courses-page {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-column {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.course-column h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.course-button {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid #333;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.course-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Specific Styles for 6 Month and 6 Week Courses Pages */
+.course-page {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.course-page .course-table {
+  margin: 2rem auto; /* Center the table horizontally */
+  max-width: 1200px; /* Ensure the table does not exceed a maximum width */
+}
+
+.course-page .course-column {
+  text-align: center;
+}
+
+/* Additions for Course Pages */
+.course-details {
+  max-width: 800px;
+  margin: 2rem auto; /* Centered with auto margin */
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+.course-details h2 {
+  font-size: 24px;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 15px;
+}
+
+.course-details h3 {
+  font-size: 20px;
+  color: #555; /* Slightly lighter text for subheadings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.course-details p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666; /* Light text for general content */
+}
+
+.course-details ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.course-details ul li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Contact Image */
+.contact-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  flex: 1.5;
+  min-width: 350px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.contact-form-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 1.1em;
+  color: #000;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Checkout Page */
+.checkout-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Details */
+.cart-details {
+  margin-bottom: 2rem;
+}
+
+.cart-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cart-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-details th, .cart-details td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: right;
+}
+
+.cart-details th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.cart-details tfoot {
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+
+.cart-details tfoot td {
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Payment Options */
+.eft-details, .online-payment {
+  margin-bottom: 2rem;
+}
+
+.eft-details h2, .online-payment h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.eft-details p {
+  margin: 0.5rem 0;
+}
+
+.online-payment form {
+  display: flex;
+  flex-direction: column;
+}
+
+.online-payment label {
+  margin-bottom: 0.5rem;
+}
+
+.online-payment input, .online-payment select {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.online-payment button {
+  padding: 0.75rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.online-payment button:hover {
+  background-color: #555;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Checkout Page Layout */
+.checkout-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Table */
+.cart-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.cart-details th, .cart-details td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* EFT Payment Option */
+.eft-details {
+  margin-bottom: 2rem;
+}
+
+/* Online Payment Form */
+.online-payment form {
+  display: flex;
+  flex-direction: column;
+}
+
+.online-payment label {
+  margin-bottom: 0.5rem;
+}
+
+.online-payment input, .online-payment select {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.online-payment button {
+  padding: 0.75rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.online-payment button:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .checkout-page {
+      padding: 1rem;
+  }
+
+  table, th, td {
+      display: block;
+      width: 100%;
+  }
+
+  th, td {
+      padding: 0.5rem;
+      text-align: right;
+  }
+}
